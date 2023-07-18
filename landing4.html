@@ -20,7 +20,7 @@
 				<!-- Header -->
 				<!-- Note: The "styleN" class below should match that of the banner element. -->
 					<header id="header" class="alt style2">
-						<a href="index.html" class="logo"><strong>Interrupter</strong> <span>Potofolio</span></a>
+						<a href="index.html" class="logo"><strong>Interrupter</strong> <span>Portfolio</span></a>
 						<nav >
 						<a href="landing1.html" class="me"><span>캐릭</span></a>
 						<a href="landing2.html" class="me"><span>영상</span></a>
@@ -164,19 +164,23 @@
 		  </script>			
 
 <script>
-	function copyTextToClipboard(text) {
-		const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-		
-		if (isMobile) {
-			window.location.href = "tel:" + text;
-		} else {
-			navigator.clipboard.writeText(text).then(function() {
-				alert("'" + text + "'가 클립보드에 복사되었습니다!");
-			}, function(err) {
-				console.error('텍스트 복사 실패: ', err);
-			});
-		}
-	}
+  function handleEmailClick(email) {
+    if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+      // 모바일 장치인 경우
+      copyTextToClipboard(email);
+    } else {
+      // 모바일 장치가 아닌 경우 (PC 등)
+      window.location.href = "mailto:" + email;
+    }
+  }
+
+  function copyTextToClipboard(text) {
+    navigator.clipboard.writeText(text).then(function() {
+      alert("'" + text + "'가 클립보드에 복사되었습니다!");
+    }, function(err) {
+      console.error('텍스트 복사 실패: ', err);
+    });
+  }
 </script>
 
 	</body>
