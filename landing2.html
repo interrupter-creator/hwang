@@ -82,6 +82,20 @@
 								<section id="two" class="spotlights">
 									<section>
 										<a class="image">
+											<video src="images/여기어때 슬라이드쇼 23.06.09.mp4" controls alt="" data-position="center center" ></video>
+										</a>
+										<div class="content">
+											<div class="inner">
+												<header class="major">
+													<h3>여기어때 슬라이드쇼 광고</h3>
+												</header>
+												<p>여기어때 광고음원을 활용하여 여행 광고 영상을 기획하여 제작하였습니다.</p>
+	
+											</div>
+										</div>
+									</section>
+									<section>
+										<a class="image">
 											<video src="images/인터럽터 몬스터 촬영 및 편집광고 23.05.12.mp4" controls alt="" data-position="center center" ></video>
 										</a>
 										<div class="content">
@@ -205,6 +219,7 @@
 		</div>
 
 	<!-- Scripts -->
+	
 		<script src="assets/js/jquery.min.js"></script>
 		<script src="assets/js/jquery.scrolly.min.js"></script>
 		<script src="assets/js/jquery.scrollex.min.js"></script>
@@ -212,6 +227,19 @@
 		<script src="assets/js/breakpoints.min.js"></script>
 		<script src="assets/js/util.js"></script>
 		<script src="assets/js/main.js"></script>
+		<script>
+			// 페이지가 로드된 후 실행되는 함수
+			window.onload = function() {
+			  // 모든 비디오 요소 가져오기
+			  var videos = document.querySelectorAll("video");
+		  
+			  // 각 비디오 요소에 대해 실행될 함수
+			  videos.forEach(function(video) {
+				// 비디오의 볼륨을 0.3 (30%)로 설정
+				video.volume = 0.2;
+			  });
+			};
+		</script>
 		<script>
 		document.querySelector(".icon.brands.alt.fa-discord").onclick = () => {
 		  window.navigator.clipboard.writeText("Interrupter#1141").then(() => {

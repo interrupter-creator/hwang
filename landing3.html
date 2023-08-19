@@ -182,6 +182,19 @@
 		<script src="assets/js/util.js"></script>
 		<script src="assets/js/main.js"></script>
 		<script>
+			// 페이지가 로드된 후 실행되는 함수
+			window.onload = function() {
+			  // 모든 비디오 요소 가져오기
+			  var videos = document.querySelectorAll("video");
+		  
+			  // 각 비디오 요소에 대해 실행될 함수
+			  videos.forEach(function(video) {
+				// 비디오의 볼륨을 0.3 (30%)로 설정
+				video.volume = 0.2;
+			  });
+			};
+		</script>
+		<script>
 		document.querySelector(".icon.brands.alt.fa-discord").onclick = () => {
 		  window.navigator.clipboard.writeText("Interrupter#1141").then(() => {
 		alert("디스코드 친구 추가 코드 'Interrupter#1141'가 클립보드에 복사되었습니다!");
